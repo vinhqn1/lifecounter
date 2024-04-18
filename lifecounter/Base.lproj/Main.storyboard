@@ -1,24 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lifecounter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="3d5-Ol-kHh">
+                                <rect key="frame" x="33" y="65" width="106.5" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hvk-S0-ufC">
+                                <rect key="frame" x="231.5" y="65" width="110.5" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZnY-sW-Ikf">
+                                <rect key="frame" x="68" y="132" width="36" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="N9F-U2-Kql">
+                                <rect key="frame" x="271" y="132" width="36" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Va-n4-kx4" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
+                                <rect key="frame" x="33" y="247" width="45" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="XrZ-Js-nWy"/>
+                                    <constraint firstAttribute="width" constant="45" id="gOz-XU-YBf"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="amount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="player" value="Player1"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lifeCounterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8lV-2g-Hgz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkS-hJ-1OV" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
+                                <rect key="frame" x="98" y="247" width="45" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="HfJ-RC-6Vz"/>
+                                    <constraint firstAttribute="width" constant="45" id="fTO-7m-ZQv"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="amount">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="player" value="Player1"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lifeCounterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jN9-Bx-Enr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aje-I7-53d" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
+                                <rect key="frame" x="33" y="296" width="45" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="7u1-Ee-fli"/>
+                                    <constraint firstAttribute="height" constant="35" id="Mui-ee-5tF"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="amount">
+                                        <integer key="value" value="-5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="player" value="Player1"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lifeCounterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZF-Gc-sQk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQT-Rr-JOq" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
+                                <rect key="frame" x="232" y="247" width="45" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="U3k-38-enz"/>
+                                    <constraint firstAttribute="height" constant="35" id="Wql-6e-PAZ"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="amount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="player" value="Player2"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lifeCounterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u9x-9x-DvH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci0-s4-EuT" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
+                                <rect key="frame" x="297" y="247" width="45" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="A8S-SZ-GFl"/>
+                                    <constraint firstAttribute="height" constant="35" id="o84-39-yBD"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="amount">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="player" value="Player2"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lifeCounterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sk6-Yi-47J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFt-Mp-GUb" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
+                                <rect key="frame" x="98" y="296" width="45" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="lqN-sw-ibe"/>
+                                    <constraint firstAttribute="height" constant="35" id="z52-PY-p3Z"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="amount">
+                                        <integer key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="player" value="Player1"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lifeCounterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Mq-1B-ORo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGR-Re-TON" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
+                                <rect key="frame" x="297" y="296" width="45" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="hSL-pL-5Je"/>
+                                    <constraint firstAttribute="height" constant="35" id="xDL-GZ-Glf"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="amount">
+                                        <integer key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="player" value="Player2"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lifeCounterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LK1-q0-jbe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMj-VT-tGl" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
+                                <rect key="frame" x="232" y="296" width="45" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="O5B-DZ-Pry"/>
+                                    <constraint firstAttribute="height" constant="35" id="dLw-RI-vbL"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="amount">
+                                        <integer key="value" value="-5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="player" value="Player2"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lifeCounterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDM-er-EdV"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" PLAYER 2 WINS!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFm-ph-yal">
+                                <rect key="frame" x="87" y="768" width="257.66666666666663" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Va-n4-kx4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="3Rs-8N-qeL"/>
+                            <constraint firstItem="Aje-I7-53d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="7cR-t5-KuL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eGR-Re-TON" secondAttribute="trailing" constant="33" id="7s3-6W-VVY"/>
+                            <constraint firstItem="3d5-Ol-kHh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="7xe-6v-5Dx"/>
+                            <constraint firstItem="Aje-I7-53d" firstAttribute="top" secondItem="5Va-n4-kx4" secondAttribute="bottom" constant="14" id="C7b-JP-Yhb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ci0-s4-EuT" secondAttribute="trailing" constant="33" id="Cdc-OO-hnm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hvk-S0-ufC" secondAttribute="trailing" constant="33" id="Fa7-er-eIh"/>
+                            <constraint firstItem="LFt-Mp-GUb" firstAttribute="top" secondItem="tkS-hJ-1OV" secondAttribute="bottom" constant="14" id="GWH-b3-fqa"/>
+                            <constraint firstItem="LFt-Mp-GUb" firstAttribute="leading" secondItem="Aje-I7-53d" secondAttribute="trailing" constant="20" id="IyX-yF-W8B"/>
+                            <constraint firstItem="ci0-s4-EuT" firstAttribute="leading" secondItem="fQT-Rr-JOq" secondAttribute="trailing" constant="20" id="OWD-wo-jXQ"/>
+                            <constraint firstItem="tkS-hJ-1OV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="247" id="PJl-Ql-Fks"/>
+                            <constraint firstItem="FFm-ph-yal" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QWc-tg-d4d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FFm-ph-yal" secondAttribute="bottom" constant="30" id="V76-wB-EQk"/>
+                            <constraint firstItem="tkS-hJ-1OV" firstAttribute="leading" secondItem="5Va-n4-kx4" secondAttribute="trailing" constant="20" id="VhM-ef-CwQ"/>
+                            <constraint firstItem="oMj-VT-tGl" firstAttribute="top" secondItem="fQT-Rr-JOq" secondAttribute="bottom" constant="14" id="Zyz-AO-6fR"/>
+                            <constraint firstItem="hvk-S0-ufC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="bBc-Qb-LoU"/>
+                            <constraint firstItem="ZnY-sW-Ikf" firstAttribute="top" secondItem="3d5-Ol-kHh" secondAttribute="bottom" constant="28" id="bhy-hu-egD"/>
+                            <constraint firstItem="tkS-hJ-1OV" firstAttribute="baseline" secondItem="ci0-s4-EuT" secondAttribute="baseline" id="cCd-cC-eSa"/>
+                            <constraint firstItem="eGR-Re-TON" firstAttribute="top" secondItem="ci0-s4-EuT" secondAttribute="bottom" constant="14" id="drp-4R-grY"/>
+                            <constraint firstItem="N9F-U2-Kql" firstAttribute="top" secondItem="hvk-S0-ufC" secondAttribute="bottom" constant="28" id="dxV-mf-opT"/>
+                            <constraint firstItem="eGR-Re-TON" firstAttribute="leading" secondItem="oMj-VT-tGl" secondAttribute="trailing" constant="20" id="hhY-Ge-xbm"/>
+                            <constraint firstItem="tkS-hJ-1OV" firstAttribute="baseline" secondItem="5Va-n4-kx4" secondAttribute="baseline" id="mOH-AK-079"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ci0-s4-EuT" secondAttribute="trailing" constant="33" id="nRS-g0-ANN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N9F-U2-Kql" secondAttribute="trailing" constant="68" id="qVs-Sh-dm5"/>
+                            <constraint firstItem="ZnY-sW-Ikf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="utM-0h-N3C"/>
+                            <constraint firstItem="3d5-Ol-kHh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="w58-lO-HXc"/>
+                            <constraint firstItem="tkS-hJ-1OV" firstAttribute="baseline" secondItem="fQT-Rr-JOq" secondAttribute="baseline" id="x2V-SV-cCX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lifeLabelPlayer1" destination="ZnY-sW-Ikf" id="qKd-J5-TTr"/>
+                        <outlet property="lifeLabelPlayer2" destination="N9F-U2-Kql" id="wY0-vY-AMs"/>
+                        <outlet property="winnerLabel" destination="FFm-ph-yal" id="33p-Ew-oxh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128.37209302325581" y="-28.969957081545065"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
