@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lifecounter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="3d5-Ol-kHh">
@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hvk-S0-ufC">
-                                <rect key="frame" x="231.5" y="65" width="110.5" height="39"/>
+                                <rect key="frame" x="176.5" y="65" width="110.5" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="N9F-U2-Kql">
-                                <rect key="frame" x="271" y="132" width="36" height="36"/>
+                                <rect key="frame" x="216" y="132" width="36" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -98,7 +98,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQT-Rr-JOq" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
-                                <rect key="frame" x="232" y="247" width="45" height="35"/>
+                                <rect key="frame" x="177" y="247" width="45" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="U3k-38-enz"/>
                                     <constraint firstAttribute="height" constant="35" id="Wql-6e-PAZ"/>
@@ -117,7 +117,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci0-s4-EuT" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
-                                <rect key="frame" x="297" y="247" width="45" height="35"/>
+                                <rect key="frame" x="242" y="247" width="45" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="A8S-SZ-GFl"/>
                                     <constraint firstAttribute="height" constant="35" id="o84-39-yBD"/>
@@ -155,7 +155,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGR-Re-TON" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
-                                <rect key="frame" x="297" y="296" width="45" height="35"/>
+                                <rect key="frame" x="242" y="296" width="45" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="hSL-pL-5Je"/>
                                     <constraint firstAttribute="height" constant="35" id="xDL-GZ-Glf"/>
@@ -174,7 +174,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMj-VT-tGl" customClass="LifeButton" customModule="lifecounter" customModuleProvider="target">
-                                <rect key="frame" x="232" y="296" width="45" height="35"/>
+                                <rect key="frame" x="177" y="296" width="45" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="O5B-DZ-Pry"/>
                                     <constraint firstAttribute="height" constant="35" id="dLw-RI-vbL"/>
